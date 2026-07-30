@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google Ads Account Review for Oxagile</title>
+<style>
+  :root{
+    --bg-dark:#0c1420;
+    --bg-panel:#121c2c;
+    --bg-panel-2:#16223554;
+    --border:#26344a;
+    --text-main:#eef2f7;
+    --text-mute:#9fadc2;
+    --amber:#f2a13a;
+    --amber-dark:#8a5613;
+    --green:#3fbf8a;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg-dark);
+    color:var(--text-main);
+    font-family:'Open Sans', Arial, sans-serif;
+    line-height:1.6;
+  }
+  .wrap{max-width:840px;margin:0 auto;padding:56px 28px 80px;}
+  .eyebrow{
+    color:var(--amber);
+    letter-spacing:2px;
+    font-size:12px;
+    font-weight:700;
+    text-transform:uppercase;
+    margin-bottom:14px;
+  }
+  h1{
+    font-family:'Montserrat', Arial, sans-serif;
+    font-size:34px;
+    line-height:1.25;
+    margin:0 0 14px;
+    font-weight:700;
+  }
+  .sub{color:var(--text-mute);font-size:16px;max-width:620px;margin-bottom:36px;}
+  .meta-row{
+    display:flex;
+    gap:28px;
+    flex-wrap:wrap;
+    padding:18px 22px;
+    background:var(--bg-panel);
+    border:1px solid var(--border);
+    border-radius:10px;
+    margin-bottom:48px;
+    font-size:13px;
+    color:var(--text-mute);
+  }
+  .meta-row strong{color:var(--text-main);display:block;font-size:14px;margin-bottom:2px;}
+  section{margin-bottom:52px;}
+  h2{
+    font-family:'Montserrat', Arial, sans-serif;
+    font-size:21px;
+    font-weight:700;
+    margin:0 0 8px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  h2 .tag{
+    font-size:11px;
+    background:var(--amber-dark);
+    color:#ffd9a3;
+    padding:3px 10px;
+    border-radius:20px;
+    font-weight:700;
+    letter-spacing:0.5px;
+  }
+  .section-desc{color:var(--text-mute);font-size:14.5px;margin-bottom:22px;max-width:640px;}
+  .card{
+    background:var(--bg-panel);
+    border:1px solid var(--border);
+    border-radius:10px;
+    padding:20px 22px;
+    margin-bottom:14px;
+  }
+  .finding{
+    display:grid;
+    grid-template-columns:auto 1fr;
+    gap:16px;
+    align-items:start;
+  }
+  .finding .dot{
+    width:10px;height:10px;border-radius:50%;
+    background:var(--amber);
+    margin-top:6px;
+    flex-shrink:0;
+  }
+  .finding.ok .dot{background:var(--green);}
+  .finding h3{font-size:15.5px;margin:0 0 6px;font-weight:700;}
+  .finding p{margin:0;font-size:14px;color:var(--text-mute);}
+  .why-box{
+    border-left:3px solid var(--amber);
+    background:var(--bg-panel-2);
+    padding:14px 18px;
+    border-radius:0 8px 8px 0;
+    font-size:14px;
+    color:var(--text-mute);
+    margin-top:18px;
+  }
+  .why-box strong{color:var(--text-main);}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  @media(max-width:640px){.grid-2{grid-template-columns:1fr;}}
+  .rec{
+    background:var(--bg-panel);
+    border:1px solid var(--border);
+    border-radius:10px;
+    padding:18px 20px;
+  }
+  .rec .num{
+    color:var(--amber);
+    font-family:'Montserrat',sans-serif;
+    font-weight:700;
+    font-size:13px;
+    margin-bottom:6px;
+    display:block;
+  }
+  .rec h3{font-size:15px;margin:0 0 6px;font-weight:700;}
+  .rec p{font-size:13.5px;color:var(--text-mute);margin:0;}
+  .track{
+    display:flex;
+    gap:0;
+    margin-top:8px;
+  }
+  .track-step{
+    flex:1;
+    background:var(--bg-panel);
+    border:1px solid var(--border);
+    padding:18px 18px;
+    position:relative;
+  }
+  .track-step:first-child{border-radius:10px 0 0 10px;}
+  .track-step:last-child{border-radius:0 10px 10px 0;}
+  .track-step:not(:last-child){border-right:none;}
+  .track-step .step-label{
+    color:var(--amber);
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    margin-bottom:8px;
+  }
+  .track-step h3{font-size:14.5px;margin:0 0 6px;font-weight:700;}
+  .track-step p{font-size:13px;color:var(--text-mute);margin:0;}
+  @media(max-width:640px){
+    .track{flex-direction:column;}
+    .track-step{border-radius:0 !important;border-right:1px solid var(--border) !important;border-bottom:none;}
+    .track-step:first-child{border-radius:10px 10px 0 0 !important;}
+    .track-step:last-child{border-radius:0 0 10px 10px !important;border-bottom:1px solid var(--border);}
+  }
+  .proof{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+    margin-top:16px;
+  }
+  @media(max-width:640px){.proof{grid-template-columns:1fr;}}
+  .proof-card{
+    background:var(--bg-panel);
+    border:1px solid var(--border);
+    border-radius:10px;
+    padding:16px 18px;
+    text-align:left;
+  }
+  .proof-card .stat{
+    font-family:'Montserrat',sans-serif;
+    font-size:22px;
+    font-weight:700;
+    color:var(--green);
+    margin-bottom:4px;
+  }
+  .proof-card .label{font-size:12.5px;color:var(--text-mute);}
+  .cta{
+    background:linear-gradient(180deg,#16223a,#101827);
+    border:1px solid var(--amber-dark);
+    border-radius:12px;
+    padding:28px 26px;
+    text-align:center;
+  }
+  .cta h2{justify-content:center;}
+  .cta p{color:var(--text-mute);font-size:14.5px;max-width:520px;margin:10px auto 0;}
+  footer{
+    text-align:center;
+    color:var(--text-mute);
+    font-size:12.5px;
+    margin-top:60px;
+    padding-top:24px;
+    border-top:1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="eyebrow">Google Ads account review · prepared for Oxagile</div>
+  <h1>What your tracking setup already shows, and where the review would start</h1>
+  <p class="sub">A short technical read of oxagile.com's public tracking layer, matched against the outcomes listed in your job post, done before I open the Google Ads account.</p>
+
+  <div class="meta-row">
+    <div><strong>Prepared for</strong>Oxagile, B2B software outsourcing</div>
+    <div><strong>Scope</strong>Search campaigns, tracking layer, account structure</div>
+    <div><strong>Format</strong>2 consulting sessions</div>
+  </div>
+
+  <section>
+    <h2>What I found before the call <span class="tag">public data only</span></h2>
+    <p class="section-desc">Everything below came from oxagile.com's own tracking requests in the browser, with no account access needed. It previews the kind of gaps a full audit surfaces.</p>
+
+    <div class="card finding">
+      <div class="dot"></div>
+      <div>
+        <h3>Two GA4 properties are firing on every pageview</h3>
+        <p>G-ESCMTZ4RPX and G-YDPYQE90RM both load and both send page_view events simultaneously. Unless this is an intentional migration, it usually means split or duplicated conversion counts feeding whoever is making bidding decisions.</p>
+      </div>
+    </div>
+
+    <div class="card finding">
+      <div class="dot"></div>
+      <div>
+        <h3>No Meta Pixel detected on the homepage</h3>
+        <p>Google Ads conversion tag (AW-1017527176) and GTM (GTM-KWR7G7) are both active, but no Meta pixel fired. If remarketing or cross-channel attribution matters later, that audience is not being built right now.</p>
+      </div>
+    </div>
+
+    <div class="card finding">
+      <div class="dot"></div>
+      <div>
+        <h3>Consent Mode denies storage until a visitor accepts cookies</h3>
+        <p>On the first pageview the consent signal reads gcs=G100, meaning ad and analytics storage are both withheld before consent. That is expected behavior, but it means a share of your conversions are modeled rather than directly observed. That share is worth checking in the account, because it changes how far to trust the reported cost per acquisition.</p>
+      </div>
+    </div>
+
+    <div class="card finding ok">
+      <div class="dot"></div>
+      <div>
+        <h3>GTM container is correctly structured</h3>
+        <p>Tags run through one GTM container (GTM-KWR7G7), so the fixes above are configuration changes rather than a rebuild. That keeps the work low-risk to your live tracking.</p>
+      </div>
+    </div>
+
+    <div class="why-box">
+      <strong>Why this matters for the ask:</strong> your post asks for feedback on account setup and a prioritized list of recommendations. If the data feeding your specialist's bidding decisions is duplicated across two GA4 properties or partly modeled, every optimization built on top of it inherits that noise. Confirming the measurement layer is clean is usually the first move, before touching bids or keywords.
+    </div>
+  </section>
+
+  <section>
+    <h2>Who the campaigns need to reach</h2>
+    <p class="section-desc">Oxagile sells outsourced software development to enterprise buyers, so the targeting logic should follow from that rather than a generic B2B template.</p>
+    <div class="grid-2">
+      <div class="rec">
+        <h3>Buyer profile</h3>
+        <p>CTOs, VPs of Engineering, and founders at mid to large tech, media, and telecom companies evaluating outsourced dev partners. Long sales cycles, high deal value, low monthly search volume on the terms that matter.</p>
+      </div>
+      <div class="rec">
+        <h3>What that changes</h3>
+        <p>Lead quality matters more than lead volume. Branded terms, high-intent long-tail search phrases, and tight negative keyword lists usually outperform broad reach for this buyer.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>What the two sessions would cover</h2>
+    <div class="track">
+      <div class="track-step">
+        <div class="step-label">Session 1</div>
+        <h3>Account walkthrough</h3>
+        <p>Live review of campaign structure, keywords, bidding strategy, and the tracking gaps above, confirmed against the real account rather than assumed.</p>
+      </div>
+      <div class="track-step">
+        <div class="step-label">Session 2</div>
+        <h3>Prioritized action plan</h3>
+        <p>A ranked list of fixes and tests, written so your in-house specialist can action each item directly, with no dependency on me to execute.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Results from accounts I manage</h2>
+    <p class="section-desc">Figures from recent Google Ads accounts, each achieved with the same structure and tracking discipline this review is built on.</p>
+    <div class="proof">
+      <div class="proof-card">
+        <div class="stat">£1,305 to £383</div>
+        <div class="label">cost per lead in one month, after negative-keyword and targeting cleanup</div>
+      </div>
+      <div class="proof-card">
+        <div class="stat">9.2x</div>
+        <div class="label">return on ad spend on a search account, driven by brand and high-intent terms</div>
+      </div>
+      <div class="proof-card">
+        <div class="stat">59% lower CPC</div>
+        <div class="label">average cost per click cut while clicks grew 128% in the same month</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta">
+    <h2>Free audit summary within 48 hours</h2>
+    <p>If it's useful, I can send a short written summary of account-level findings across structure, tracking, and targeting within 24 to 48 hours of getting a look at the account, at no cost and with no commitment attached.</p>
+  </div>
+
+  <footer>
+    Prepared as a working reference ahead of the Google Ads consulting sessions, not a final audit.
+  </footer>
+</div>
+</body>
+</html>
